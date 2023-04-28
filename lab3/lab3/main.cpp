@@ -17,20 +17,15 @@ int main()
     }
 
     cout << "\nEnter the coordinates that will be checked:" << endl;
-    cout << "Enter x: ";
-    cin >> s;
-    cout << "Enter y: ";
-    cin >> d;
-    cout << "Enter z: ";
-    cin >> f;
-
-    cout << "This point belongs to spheres:";
+    cout << "Enter x, y, z: ";
+    cin >> s >> d >> f;
 
     for (size_t i = 0; i < k; i++)
     {
         if (array[i].Checking(s, d, f) < array[i].getRadius()) {
-            cout << i + 1 << " ";
+            cout << "This point belongs to sphere: "<< i + 1 << endl;
         }
+        
     }
 
     return 0;
